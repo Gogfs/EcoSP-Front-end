@@ -1,0 +1,96 @@
+/* Tablet */
+@media (max-width: 1023px) {
+  .ecopontos-grid,
+  .recompensas-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile (375px — coluna única, zero rolagem horizontal, Bottom Navigation fixa) */
+@media (max-width: 640px) {
+  .nav-desktop {
+    display: none;
+  }
+
+  .topbar-inner {
+    padding: 0.75rem 1rem;
+  }
+
+  .main-container {
+    padding: 1.25rem 1rem 5.75rem;
+  }
+
+  .ecopontos-header h1,
+  .recompensas-header h1 {
+    font-size: 1.45rem;
+  }
+
+  .ecopontos-grid,
+  .recompensas-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .recompensas-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .saldo-pill {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .filtros-container {
+    gap: 0.5rem;
+  }
+
+  .filtro-btn {
+    padding: 0.5rem 0.95rem;
+    font-size: 0.82rem;
+  }
+
+  .ecoponto-card,
+  .recompensa-card {
+    padding: 1.15rem;
+  }
+
+  /* Barra de navegação inferior fixa */
+  .bottom-nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 150;
+    background-color: var(--bg-surface);
+    border-top: 1px solid var(--border-subtle);
+    padding: 0.35rem 0.25rem;
+  }
+
+  .bottom-nav-item {
+    min-height: 48px;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.15rem;
+    cursor: pointer;
+  }
+
+  .bottom-nav-item.active {
+    color: var(--brand-primary);
+    font-weight: 800;
+  }
+
+  .bottom-nav-item:disabled {
+    opacity: 0.45;
+  }
+}
