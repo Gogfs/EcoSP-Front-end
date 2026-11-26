@@ -1,0 +1,25 @@
+:root {
+  --cor-primaria: #FF7A1A;
+  --cor-primaria-escura: #E05A00;
+  --cor-brilhante: #FF9100;
+  --cor-suave: #FFD0A6;
+  --cor-texto-sobre-primaria: #111214;
+
+  --fundo: #F8F9FA;
+  --superficie: #FFFFFF;
+  --texto: #111214;
+  --texto-2: #4B5563;
+  --borda: #CFD4DA;
+  --destaque-texto: #C2410C;
+  --fundo-badge: #FFF4EB;
+
+  --sucesso: #10B981;
+  --erro: #EF4444;
+  --erro-fundo: #FEE2E2;
+  --erro-texto: #B91C1C;
+  --sucesso-fundo: #D1FAE5;
+  --sucesso-texto: #065F46;
+
+  --sombra: 0 1px 3px rgba(17, 18, 20, 0.08);
+  --sombra-hover: 0 10px 24px rgba(224, 90, 0, 0.18);
+}

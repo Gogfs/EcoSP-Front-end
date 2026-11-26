@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoSP Experience</title>
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="cabecalho__interno">
+            <span class="logo">♻️ EcoSP Experience</span>
+
+            <nav aria-label="Menu Principal">
+                <div class="menu">
+                    <a class="menu__link" href="#inicio">Início</a>
+                    <a class="menu__link" href="#ecopontos">Ecopontos</a>
+                    <a class="menu__link" href="#extrato">Extrato de Pontos</a>
+                    <a class="menu__link" href="#recompensas">Recompensas</a>
+                </div>
+            </nav>
+            <label for="tema" class="botao-tema" role="button" aria-label="Alternar tema claro/escuro"></label>
+        </div>
+    </header>
+
+    <main>
+        <section class="tela" id="inicio">
+            <h1 class="titulo-tela">Início</h1>
+            <p>Tela de outro integrante.</p>
+        </section>
+
+        <section class="tela" id="Pontos">
+            <div id="tela-ecopontos">
+                <h1 class="titulo-tela">📍 Rede Municipal de Ecopontos</h1>
+                <p class="subtitulo-tela">Consulte os postos de coleta seletiva, horários de funcionamento e materiais aceitos na capital.</p>
+                <div class="filtros" role="radiogroup" aria-label="Filtrar ecopontos por material">
+                    <span class="filtros__rotulo">Filtrar por material:</span>
+
+                    <input type="radio" name="filtro" id="f-todos" class="escondido" checked>
+                    <label for="f-todos" class="pilula">Todos os Materiais</label>
+
+                    <input type="radio" name="filtro" id="f-plasticos" class="escondido">
+                    <label for="f-plasticos" class="pilula">Plásticos</label>
+
+                    <input type="radio" name="filtro" id="f-papeis" class="escondido">
+                    <label for="f-papeis" class="pilula">Papeis</label>
+
+                    <input type="radio" name="filtro" id="f-metais" class="escondido">
+                    <label for="f-metais" class="pilula">Metais</label>
+
+                    <input type="radio" name="filtro" id="f-vidros" class="escondido">
+                    <label for="f-vidros" class="pilula">Vidros</label>
+
+                    <input type="radio" name="filtro" id="f-eletronicos" class="escondido">
+                    <label for="f-eletronicos" class="pilula">Eletrônicos</label>
+                </div>
+                #PAREI NO PASSO 5
+                <div class="grade">
+
+                    <article class="card" data-materiais="platicos vidros metais eletronicos">
+                        <span class="badge">Zona Oeste</span>
+                        <h2 class="card__nome">Ecoponto Pinheiros</h2>
+                        <p class="card__endereco">📍 Praça Victor Civita, 100 • Pinheiros</p>
+                        <p class="card__texto">Unidade modelo com esteira automatizada e balança digital com integração direta ao app EcoSP.</p>
+                        <div class="lista-badges">
+                            <span class="badge badge--material">Plásticos</span>
+                            <span class="badge badge--material">Papéis</span>
+                            <span class="badge badge--material">Metais</span>
+                        </div>
+                        <div class="card__rodape">
+                            <span class="status-aberto">Aberto • 08:00 às 17:00 </span>
+                            <span class="badge">Balança Rápida</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="tela" id="extrato">
+            <h1 class="titulo-tela">Extrato de Pontos</h1>
+            <p>Tela de outro integrante.</p>
+        </section>
+
+        <section class="tela" id="recompensas">
+            <h1 class="titulo-tea">🎁 Catálogo de Benefícios &amp; Recompensas</h1>
+            <p class="subtitulo-tela">Troque seus EcoPoints por descontos no IPTU, créditos de transporte e itens sustentáveis.</p>
+        </section>
+    </main>
+    
+</body>
+</html>
