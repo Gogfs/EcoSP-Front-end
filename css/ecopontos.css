@@ -1,0 +1,207 @@
+.ecopontos-header {
+  margin-bottom: 1.5rem;
+}
+
+.ecopontos-header h1 {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.ecopontos-header p {
+  margin-top: 0.35rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+/* Barra de Filtros em formato pastilha (pills) */
+.filtros-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.75rem;
+}
+
+.filtro-btn {
+  min-height: 44px;
+  padding: 0.55rem 1.2rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-default);
+  background-color: var(--bg-surface);
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.filtro-btn:hover {
+  border-color: var(--brand-primary);
+  color: var(--brand-text-accent);
+  background-color: var(--brand-tint);
+}
+
+.filtro-btn.active {
+  background-color: var(--brand-primary);
+  border-color: var(--brand-primary);
+  color: var(--btn-primary-text);
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(255, 122, 26, 0.25);
+}
+
+/* Grade de 3 Colunas (Desktop) */
+.ecopontos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+/* Card do Ecoponto */
+.ecoponto-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  padding: 1.4rem;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  animation: cardFadeUp 0.38s ease both;
+  transition: transform var(--transition-base),
+              box-shadow var(--transition-base),
+              border-color var(--transition-base),
+              background-color var(--transition-base);
+}
+
+.ecoponto-card:nth-child(2) { animation-delay: 0.05s; }
+.ecoponto-card:nth-child(3) { animation-delay: 0.10s; }
+.ecoponto-card:nth-child(4) { animation-delay: 0.15s; }
+.ecoponto-card:nth-child(5) { animation-delay: 0.20s; }
+.ecoponto-card:nth-child(6) { animation-delay: 0.25s; }
+
+.ecoponto-card:hover,
+.ecoponto-card:focus-within {
+  transform: translateY(-5px);
+  border-color: var(--brand-primary);
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* Topo do Card: Zona (esquerda) + Status (direita) */
+.ecoponto-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.badge-zona {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.28rem 0.7rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--brand-tint);
+  color: var(--brand-text-accent);
+}
+
+.status-aberto {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--state-success);
+}
+
+/* Conteúdo do Card */
+.ecoponto-nome {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.55rem;
+}
+
+.ecoponto-info {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+}
+
+.ecoponto-info + .ecoponto-info {
+  margin-top: 0.4rem;
+}
+
+/* Badges de Materiais Aceitos (Cores fiéis ao print) */
+.materiais-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.tag-material {
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 0.26rem 0.65rem;
+  border-radius: var(--radius-pill);
+}
+
+.tag-material.plastico {
+  background-color: #FEE2E2;
+  color: #B91C1C;
+}
+
+.tag-material.papel {
+  background-color: #DBEAFE;
+  color: #1D4ED8;
+}
+
+.tag-material.metal {
+  background-color: #FEF3C7;
+  color: #B45309;
+}
+
+.tag-material.vidro {
+  background-color: #D1FAE5;
+  color: #047857;
+}
+
+.tag-material.eletronicos {
+  background-color: #EDE9FE;
+  color: #6D28D9;
+}
+
+/* Ajuste dos badges de materiais no Modo Escuro */
+[data-theme="dark"] .tag-material.plastico {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #FCA5A5;
+}
+[data-theme="dark"] .tag-material.papel {
+  background-color: rgba(59, 130, 246, 0.2);
+  color: #93C5FD;
+}
+[data-theme="dark"] .tag-material.metal {
+  background-color: rgba(245, 158, 11, 0.22);
+  color: #FCD34D;
+}
+[data-theme="dark"] .tag-material.vidro {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: #6EE7B7;
+}
+[data-theme="dark"] .tag-material.eletronicos {
+  background-color: rgba(139, 92, 246, 0.22);
+  color: #C4B5FD;
+}
+
+.ecopontos-vazio {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2.5rem;
+  background-color: var(--bg-surface);
+  border: 1px dashed var(--border-default);
+  border-radius: var(--radius-card);
+  color: var(--text-secondary);
+}
