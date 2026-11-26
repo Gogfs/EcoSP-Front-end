@@ -1,0 +1,353 @@
+/* Cabeçalho da Tela 4 + CARD de Saldo Disponível */
+.recompensas-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.recompensas-header h1 {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.recompensas-header p {
+  margin-top: 0.35rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.saldo-pill {
+  background-color: var(--brand-tint);
+  border: 1px solid var(--brand-soft);
+  border-radius: var(--radius-control);
+  padding: 0.75rem 1.25rem;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+[data-theme="dark"] .saldo-pill {
+  border-color: rgba(255, 122, 26, 0.4);
+}
+
+.saldo-pill span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.saldo-pill strong {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--brand-dark);
+}
+
+[data-theme="dark"] .saldo-pill strong {
+  color: var(--brand-primary);
+}
+
+/* Alerta amigável (Saldo Insuficiente / Sucesso) */
+.alerta-resgate {
+  margin-bottom: 1.25rem;
+  padding: 0.95rem 1.2rem;
+  border-radius: var(--radius-control);
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  animation: cardFadeUp 0.25s ease both;
+}
+
+.alerta-resgate.hidden {
+  display: none;
+}
+
+.alerta-resgate.erro {
+  background-color: var(--state-error-bg);
+  border: 1px solid var(--state-error);
+  color: #B91C1C;
+}
+
+[data-theme="dark"] .alerta-resgate.erro {
+  color: #FCA5A5;
+}
+
+.btn-fechar-alerta {
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  min-width: 32px;
+  min-height: 32px;
+}
+
+/* Grade de 3 Colunas (Desktop) */
+.recompensas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+/* Card de Recompensa */
+.recompensa-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  padding: 1.4rem;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.15rem;
+  animation: cardFadeUp 0.38s ease both;
+  transition: transform var(--transition-base),
+              box-shadow var(--transition-base),
+              border-color var(--transition-base),
+              background-color var(--transition-base);
+}
+
+.recompensa-card:nth-child(2) { animation-delay: 0.05s; }
+.recompensa-card:nth-child(3) { animation-delay: 0.10s; }
+.recompensa-card:nth-child(4) { animation-delay: 0.15s; }
+.recompensa-card:nth-child(5) { animation-delay: 0.20s; }
+.recompensa-card:nth-child(6) { animation-delay: 0.25s; }
+
+.recompensa-card:hover,
+.recompensa-card:focus-within {
+  transform: translateY(-5px);
+  border-color: var(--brand-primary);
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* Topo do Card: Ícone (esquerda) + Badge Categoria (direita) */
+.recompensa-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.recompensa-icone {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.recompensa-categoria {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.28rem 0.75rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--brand-tint);
+  color: var(--brand-text-accent);
+}
+
+.recompensa-titulo {
+  font-size: 1.08rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.45rem;
+}
+
+.recompensa-descricao {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Rodapé do Card: Pontos (esquerda) + Botão Resgatar (direita) */
+.recompensa-footer {
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.recompensa-custo {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--brand-dark);
+}
+
+[data-theme="dark"] .recompensa-custo {
+  color: var(--brand-primary);
+}
+
+.btn-resgatar {
+  min-height: 44px;
+  padding: 0.6rem 1.25rem;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--brand-primary);
+  color: var(--btn-primary-text);
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color var(--transition-base), transform 0.15s ease;
+}
+
+.btn-resgatar:hover {
+  background-color: var(--brand-dark);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+.btn-resgatar:active {
+  transform: scale(0.97);
+}
+
+/* Indicação visual sutil quando o saldo é insuficiente (mantém clicável para o alerta) */
+.btn-resgatar.saldo-baixo {
+  background-color: var(--bg-surface-muted);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-default);
+}
+
+.btn-resgatar.saldo-baixo:hover {
+  background-color: var(--state-error-bg);
+  border-color: var(--state-error);
+  color: var(--state-error);
+}
+
+/* Modal de Confirmação e Voucher Gerado */
+.modal-voucher {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(17, 18, 20, 0.72);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.modal-voucher.hidden {
+  display: none;
+}
+
+.modal-voucher-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-top: 4px solid var(--brand-primary);
+  border-radius: var(--radius-card);
+  padding: 1.75rem;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.28);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  animation: cardFadeUp 0.25s ease both;
+}
+
+.modal-voucher-check {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: var(--state-success-bg);
+  color: var(--state-success);
+  font-size: 1.6rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-voucher-card h2 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.modal-voucher-card p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+.voucher-box {
+  width: 100%;
+  background-color: var(--brand-tint);
+  border: 2px dashed var(--brand-primary);
+  border-radius: var(--radius-control);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.voucher-box span {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--brand-text-accent);
+}
+
+.voucher-box strong {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.voucher-saldo-info {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.modal-voucher-acoes {
+  width: 100%;
+  display: flex;
+  gap: 0.65rem;
+  margin-top: 0.25rem;
+}
+
+.btn-secundario-voucher,
+.btn-fechar-voucher {
+  flex: 1;
+  min-height: 44px;
+  border-radius: 10px;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.btn-secundario-voucher {
+  background-color: var(--bg-surface-muted);
+  border: 1px solid var(--border-default);
+  color: var(--text-primary);
+}
+
+.btn-secundario-voucher:hover {
+  border-color: var(--brand-primary);
+}
+
+.btn-fechar-voucher {
+  background-color: var(--brand-primary);
+  border: none;
+  color: var(--btn-primary-text);
+}
+
+.btn-fechar-voucher:hover {
+  background-color: var(--brand-dark);
+  color: #FFFFFF;
+}
