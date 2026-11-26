@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "nome": "Ecoponto Pinheiros",
+    "zona": "Zona Oeste",
+    "status": "Aberto agora",
+    "endereco": "Praça Victor Civita, 100 - Pinheiros",
+    "horario": "Seg a Sáb: 06h às 22h | Dom: 06h às 18h",
+    "materiais": ["plastico", "papel", "metal", "vidro", "eletronicos"]
+  },
+  {
+    "id": 2,
+    "nome": "Ecoponto Vila Mariana",
+    "zona": "Zona Sul",
+    "status": "Aberto agora",
+    "endereco": "Rua Maurício Francisco Klabin, 37 - Vila Mariana",
+    "horario": "Seg a Sáb: 06h às 22h | Dom: 06h às 18h",
+    "materiais": ["plastico", "papel", "metal", "vidro"]
+  },
+  {
+    "id": 3,
+    "nome": "Ecoponto Tatuapé",
+    "zona": "Zona Leste",
+    "status": "Aberto agora",
+    "endereco": "Av. Salim Farah Maluf, 179 - Tatuapé",
+    "horario": "Seg a Sáb: 06h às 22h",
+    "materiais": ["plastico", "papel", "metal", "eletronicos"]
+  },
+  {
+    "id": 4,
+    "nome": "Ecoponto Santana",
+    "zona": "Zona Norte",
+    "status": "Aberto agora",
+    "endereco": "Av. Zaki Narchi, 360 - Carandiru",
+    "horario": "Seg a Sáb: 06h às 22h | Dom: 06h às 18h",
+    "materiais": ["plastico", "papel", "vidro"]
+  },
+  {
+    "id": 5,
+    "nome": "Ecoponto Bela Vista",
+    "zona": "Zona Central",
+    "status": "Aberto agora",
+    "endereco": "Rua Jaceguai, 67 - Bela Vista",
+    "horario": "Seg a Sáb: 07h às 20h",
+    "materiais": ["papel", "metal", "eletronicos"]
+  },
+  {
+    "id": 6,
+    "nome": "Ecoponto Butantã",
+    "zona": "Zona Oeste",
+    "status": "Aberto agora",
+    "endereco": "Av. Corifeu de Azevedo Marques, 2000 - Butantã",
+    "horario": "Seg a Sáb: 06h às 22h | Dom: 06h às 18h",
+    "materiais": ["plastico", "vidro", "eletronicos"]
+  }
+]
