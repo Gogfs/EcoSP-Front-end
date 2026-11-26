@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "icone": "🏛️",
+    "categoria": "Tributo Municipal",
+    "titulo": "Desconto IPTU Verde 5%",
+    "descricao": "Abatimento direto de 5% no valor anual do IPTU residencial na cidade de São Paulo.",
+    "pontos": 800
+  },
+  {
+    "id": 2,
+    "icone": "🚌",
+    "categoria": "Mobilidade",
+    "titulo": "Bilhete Único SPTrans R$ 20",
+    "descricao": "Crédito de R$ 20,00 recarregado automaticamente no seu cartão Bilhete Único.",
+    "pontos": 400
+  },
+  {
+    "id": 3,
+    "icone": "🥬",
+    "categoria": "Alimentação",
+    "titulo": "Voucher Feira Orgânica R$ 30",
+    "descricao": "Vale-compras de R$ 30,00 para produtos orgânicos em feiras municipais credenciadas.",
+    "pontos": 350
+  },
+  {
+    "id": 4,
+    "icone": "🌱",
+    "categoria": "Meio Ambiente",
+    "titulo": "Muda de Árvore Nativa",
+    "descricao": "Retire uma muda certificada de Ipê Amarelo ou Pau-Brasil nos parques municipais.",
+    "pontos": 150
+  },
+  {
+    "id": 5,
+    "icone": "♻️",
+    "categoria": "Casa Sustentável",
+    "titulo": "Kit Composteira Doméstica",
+    "descricao": "Composteira completa com 3 caixas empilháveis e manual de compostagem urbana.",
+    "pontos": 1500
+  },
+  {
+    "id": 6,
+    "icone": "🛍️",
+    "categoria": "Brinde EcoSP",
+    "titulo": "Ecobag Oficial EcoSP",
+    "descricao": "Sacola retornável produzida em algodão 100% reciclado com estampa exclusiva.",
+    "pontos": 250
+  }
+]
